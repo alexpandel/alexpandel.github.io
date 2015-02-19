@@ -2,10 +2,12 @@ body{
 	font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 
-.active{
-	display: block;
-}
-
 .content-container{
 	display: none;
 }
+
+.active{
+	display: block;
+}
+ 
+

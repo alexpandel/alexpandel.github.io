@@ -5,6 +5,7 @@
     <title>Alex Pandel Design</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/desktop.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   </head>
   <body>
     <section id="left-sidebar">
@@ -12,24 +13,24 @@
 	    <p>~20-word bio goes here</p>
 	    <nav>
 	      <ul>
-	        <li><a class="nav-link" id="#about">ABOUT</a></li>
+	        <li><a class="nav-link" href="#about">ABOUT</a></li>
 	        <li>PROJECTS
 	        	<ul>
-	        		<li><a class="nav-link" id="civic-insight">CIVIC INSIGHT</a></li>
-	        		<li><a class="nav-link" id="blightstatus">BLIGHTSTATUS</a></li>
-	        		<li><a class="nav-link" id="nola-ready">NOLA READY</a></li>
-	        		<li><a class="nav-link" id="future-project">THE FUTURE PROJECT</a></li>
+	        		<li><a class="nav-link" href="#civic-insight">CIVIC INSIGHT</a></li>
+	        		<li><a class="nav-link" href="#blightstatus">BLIGHTSTATUS</a></li>
+	        		<li><a class="nav-link" href="#nola-ready">NOLA READY</a></li>
+	        		<li><a class="nav-link" href="#future-project">THE FUTURE PROJECT</a></li>
 	        	</ul>
 	        </li>
-	        <li><a class="nav-link" id="speaking-writing">SPEAKING + WRITING</a></li>
-	        <li><a class="nav-link" id="resume">RESUME</a></li>
+	        <li><a class="nav-link" href="#speaking-writing">SPEAKING + WRITING</a></li>
+	        <li><a class="nav-link" href="#resume">RESUME</a></li>
 	      </ul>
 	    </nav>
     </section>
 
     <section id="right-content">
 
-    	<article class="content-container" target="speaking-writing">
+    	<article class="content-container" id="speaking-writing">
     	<h1>Talks & Workshops</h1>
 	    	<h2>2014</h2>
 	    		<ul>
@@ -46,7 +47,7 @@
 	    	<h2>2012</h2>
     	</article>
 
-    	<article class="content-container" target="blightstatus">
+    	<article class="content-container" id="blightstatus">
     		<h1>BlightStatus</h1>
     		<h2>THE PROBLEM:</h2>
     		<p>
@@ -72,49 +73,48 @@
     			// .addClass "hide" to all other content blocks that aren't the "active-content" one
     			// .addClass "active-link" to the corresponding nav link
 
-    		/*	(MODIFIED) ADVICE FROM CHACH
+    			// (MODIFIED) ADVICE FROM CHACH
 
-	    			JQuery:
+	    		// 	JQuery:
 
 							// onclick of a link in the #left-sidebar, call the function "toggleActive"
-							$(a#left-sidebar).on("click", toggleActive);
+							$(".nav-link").on("click", toggleActive) 
 
-				 			// define "toggleActive" function
-				 			toggleActive() {
-
-							 	// ???? what is the first target? 
-							 	target = $(this).attr("target"); 
+							// define "toggleActive" function
+							function toggleActive(e) {
+						
+							 	var target = $(this).attr("href"); 
 
 							 	// Remove all active classes
-							 	$(.content-container).removeClass("active");
+							 	$(".content-container").removeClass("active");
 
 							 	// Except for the target link, where you will addClass "active"
-							 	$(target).addClass(‘active’);
-						 
+							 	$(target).addClass("active");
+
 							}
+							
+
+						// HTML: 
+						// 	oh any your link:
+						// 	<article class="content-container" target="speaking-writing"> content </article>
+
+						// 	your left bar links contain <a class=“linkclass”>link</a> they don’t need href
+						// 	<a class=“linkclass” href="#speaking-writing">link</a> they don’t need href
 
 
-						HTML: 
-							oh any your link:
-							<article class="content-container" target="speaking-writing"> content </article>
-
-							your left bar links contain <a class=“linkclass”>link</a> they don’t need href
-							<a class=“linkclass” id="speaking-writing">link</a> they don’t need href
-
-
-						CSS:
+						// CSS:
 	
-						.active {
-						 display: block;
-						}
+						// .active {
+						//  display: block;
+						// }
 
-						.contentcontainername {
-						    display:none
-						}
+						// .contentcontainername {
+						//     display:none
+						// }
 
 
 						// add active to your first div for page load.
-				*/
+				
 
 
 
@@ -179,10 +179,8 @@
 				HTML: 
 					oh any your link:
 					<div class=“contentcontainername” target=“uniquenameoftarget”>content </div>
-					<article class="content-container" target="speaking-writing"> content </article>
 
 					your left bar links contain <a class=“linkclass”>link</a> they don’t need href
-					<a class=“linkclass” id="speaking-writing">link</a> they don’t need href
 
 
 				CSS:
