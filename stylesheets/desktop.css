@@ -4,10 +4,20 @@ body{
 
 .content-container{
 	display: none;
+	float: right;
+	max-width: 70%;
+	padding: 1% 2.5%;
 }
 
 .active{
 	display: block;
 }
+
+#left-sidebar{
+	float: left;
+	max-width: 20%;
+	padding: 1% 2.5%;
+}
+
  
 
