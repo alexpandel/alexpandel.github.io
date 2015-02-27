@@ -9,8 +9,8 @@ img{
 .content-container{
 	display: none;
 	float: right;
-	width: 70%;
-	padding: 1% 2.5%;
+	width: 61%;
+	padding: 1% 7%;
 }
 
 .active{
@@ -35,3 +35,14 @@ img{
 	margin: 0 .5% 0 0;
 }
 
+.subheading{
+	font-size: 1.2em;
+	padding: 0 12% 1% 8%;
+	font-style: italic;
+	font-weight: 400;
+}
+
+.bold-italic-inline{
+	font-style: italic;
+	font-weight: 700;
+}
