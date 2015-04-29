@@ -1,0 +1,49 @@
+@media screen and (max-width: 900px) {
+	ul{
+		margin-left: 12em;
+	}
+
+	h1{
+		padding: 20px 0 20px 50px;
+	}
+
+	h2{
+		margin: 0 20px 0 50px;
+	} 
+	.line-break-long{
+		max-width: 14em;
+	}
+
+	.line-break{
+		max-width: 11.5em;
+	}
+}
+
+
+@media screen and (max-width: 600px) {
+	ul{
+		margin-left: -2em;
+		padding-bottom: 0;
+	}
+
+	h1{
+		padding: 0 0 0 .4em;
+	}
+
+	h2{
+		margin: 0 0 0 .4em;
+		float: none;
+		font-size: 1.2em;
+		padding-top: 1em;
+	} 
+
+	.line-break-long{
+		max-width: 100%;
+	}
+
+	.line-break{
+		max-width: 100%;
+	}
+}
+
+

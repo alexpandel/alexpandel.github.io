@@ -2,6 +2,7 @@ html{
 	background-image: url("../images/diagonal-noise2.jpg");
 	background-color: #f5f6fa;
 	text-shadow: 0px 0px 0px #b8cdcd;
+	font-size: 100%;
 }
 
 body{
@@ -47,6 +48,14 @@ h1{
 	font-weight: 400;
 	color: #ec008c;
 	/*color: #303945;*/
+}
+
+.line-break-long{
+	max-width: 23em;
+}
+
+.line-break{
+	max-width: 20.5em;
 }
 
 h2{
